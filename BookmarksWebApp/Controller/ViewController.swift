@@ -13,10 +13,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var myCollectionView: UICollectionView!
 
     
-    let bookmark = [Bookmark(name: "Apple", link: "https://www.apple.com", icon: UIImage(named: "apple")!),
-                    Bookmark(name: "Google", link: "https://www.google.com", icon: UIImage(named: "google")!),
-                    Bookmark(name: "Facebook", link: "https://www.facebook.com", icon: UIImage(named: "fb")!),
-                    Bookmark(name: "Stack Overflow", link: "https://www.stackoverflow.com", icon: UIImage(named: "stackoverflow")!)
+    let bookmark = [Bookmark(name: "Apple", link: "https://www.apple.com", iconImgName:"apple"),
+                    Bookmark(name: "Google", link: "https://www.google.com", iconImgName:"google"),
+                    Bookmark(name: "Facebook", link: "https://www.facebook.com", iconImgName:"fb"),
+                    Bookmark(name: "Stack Overflow", link: "https://www.stackoverflow.com", iconImgName:"stackoverflow")
     ]
 
     override func viewDidLoad() {
@@ -31,11 +31,39 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = myCollectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! BookmarksCell
         cell.createCell(bookmark: bookmark[indexPath.row])
-        
         return cell
-        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        var bmark: Bookmark!
+        bmark = bookmark[indexPath.row]
+        performSegue(withIdentifier: "showWeb", sender: bmark)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showWeb" {
+            if let webVC = segue.destination as? WebviewVC {
+                if let bmark = sender as? Bookmark {
+                    webVC.bookmark = bmark
+                }
+            }
+        }
     }
 
+    
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
 

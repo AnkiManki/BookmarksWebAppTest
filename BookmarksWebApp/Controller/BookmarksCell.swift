@@ -18,7 +18,7 @@ class BookmarksCell: UICollectionViewCell {
     
     func createCell(bookmark: Bookmark) {
         self.bookmark = bookmark
-        bookmarkImage.image = self.bookmark.icon
+        bookmarkImage.image = UIImage(named: self.bookmark.iconImgName)
         bookmarkNameLbl.text = self.bookmark.name
     }
 

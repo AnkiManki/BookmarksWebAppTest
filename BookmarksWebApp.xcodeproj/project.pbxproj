@@ -14,6 +14,7 @@
 		9D63887E1F6BD3A000AAFDC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D63887C1F6BD3A000AAFDC8 /* LaunchScreen.storyboard */; };
 		9D63888A1F6BD4A300AAFDC8 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6388891F6BD4A300AAFDC8 /* Bookmark.swift */; };
 		9D63888E1F6BE6C500AAFDC8 /* BookmarksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D63888D1F6BE6C500AAFDC8 /* BookmarksCell.swift */; };
+		9DF017EF1F6BFA3600E0B5FA /* WebviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF017EE1F6BFA3600E0B5FA /* WebviewVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9D63887F1F6BD3A000AAFDC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D6388891F6BD4A300AAFDC8 /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
 		9D63888D1F6BE6C500AAFDC8 /* BookmarksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksCell.swift; sourceTree = "<group>"; };
+		9DF017EE1F6BFA3600E0B5FA /* WebviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebviewVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			children = (
 				9D6388751F6BD3A000AAFDC8 /* ViewController.swift */,
 				9D63888D1F6BE6C500AAFDC8 /* BookmarksCell.swift */,
+				9DF017EE1F6BFA3600E0B5FA /* WebviewVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DF017EF1F6BFA3600E0B5FA /* WebviewVC.swift in Sources */,
 				9D6388761F6BD3A000AAFDC8 /* ViewController.swift in Sources */,
 				9D6388741F6BD3A000AAFDC8 /* AppDelegate.swift in Sources */,
 				9D63888A1F6BD4A300AAFDC8 /* Bookmark.swift in Sources */,

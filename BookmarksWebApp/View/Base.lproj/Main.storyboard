@@ -76,15 +76,51 @@
                     <navigationItem key="navigationItem" title="Bookmarks" id="zWf-6O-VVO"/>
                     <connections>
                         <outlet property="myCollectionView" destination="CCI-gU-1Ue" id="0K8-Pd-wzS"/>
+                        <segue destination="ZtT-lh-eFl" kind="show" identifier="showWeb" id="jHW-Pg-IXi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="476" y="133.5832083958021"/>
         </scene>
+        <!--WebviewVC-->
+        <scene sceneID="zLr-Ea-Ooq">
+            <objects>
+                <viewController id="ZtT-lh-eFl" customClass="WebviewVC" customModule="BookmarksWebApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eSm-WW-H0m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aTk-OT-ngs">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vNo-hy-3BZ" firstAttribute="bottom" secondItem="aTk-OT-ngs" secondAttribute="bottom" id="94M-6M-FaO"/>
+                            <constraint firstItem="vNo-hy-3BZ" firstAttribute="trailing" secondItem="aTk-OT-ngs" secondAttribute="trailing" id="G2A-sc-14h"/>
+                            <constraint firstItem="aTk-OT-ngs" firstAttribute="top" secondItem="eSm-WW-H0m" secondAttribute="top" id="H3M-CJ-TJH"/>
+                            <constraint firstItem="aTk-OT-ngs" firstAttribute="leading" secondItem="vNo-hy-3BZ" secondAttribute="leading" id="ayS-la-Dei"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vNo-hy-3BZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="myWebView" destination="aTk-OT-ngs" id="u8f-8y-09K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qgl-nf-iyN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1237.5999999999999" y="131.78410794602701"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="3qx-wA-iya">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cw6-kn-tu4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hud-WA-dWu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1dt-eC-3M6">
@@ -96,7 +132,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9FX-IZ-jYg"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cw6-kn-tu4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-244" y="134"/>
         </scene>

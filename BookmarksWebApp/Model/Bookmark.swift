@@ -12,13 +12,13 @@ class Bookmark {
     
     private(set) var name: String
     private(set) var link: String
-    private(set) var icon: UIImage
+    private(set) var iconImgName: String
     
-    init(name: String, link: String, icon: UIImage) {
+    init(name: String, link: String, iconImgName: String) {
         
         self.name = name
         self.link = link
-        self.icon = icon
+        self.iconImgName = iconImgName
     }
     
 }
