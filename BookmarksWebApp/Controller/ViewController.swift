@@ -16,7 +16,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     let bookmark = [Bookmark(name: "Apple", link: "https://www.apple.com", iconImgName:"apple"),
                     Bookmark(name: "Google", link: "https://www.google.com", iconImgName:"google"),
                     Bookmark(name: "Facebook", link: "https://www.facebook.com", iconImgName:"fb"),
-                    Bookmark(name: "Stack Overflow", link: "https://www.stackoverflow.com", iconImgName:"stackoverflow")
+                    Bookmark(name: "Stack Overflow", link: "http://www.stackoverflow.com", iconImgName:"stackoverflow")
     ]
 
     override func viewDidLoad() {

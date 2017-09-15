@@ -99,6 +99,10 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="470-HI-wMP">
+                                <rect key="frame" x="177" y="116" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -110,6 +114,7 @@
                         <viewLayoutGuide key="safeArea" id="vNo-hy-3BZ"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="470-HI-wMP" id="ZZ7-U1-7Ba"/>
                         <outlet property="myWebView" destination="aTk-OT-ngs" id="u8f-8y-09K"/>
                     </connections>
                 </viewController>
@@ -120,7 +125,6 @@
         <!--Navigation Controller-->
         <scene sceneID="3qx-wA-iya">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cw6-kn-tu4" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hud-WA-dWu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1dt-eC-3M6">
@@ -132,6 +136,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9FX-IZ-jYg"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cw6-kn-tu4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-244" y="134"/>
         </scene>
