@@ -10,12 +10,18 @@ import UIKit
 
 class BookmarksCell: UICollectionViewCell {
     
+    var bookmark: Bookmark!
+    
     @IBOutlet weak var bookmarkImage: UIImageView!
     @IBOutlet weak var bookmarkNameLbl: UILabel!
+
     
-    func createCell(image: UIImage, name: String) {
-        bookmarkImage.image = image
-        bookmarkNameLbl.text = name
+    func createCell(bookmark: Bookmark) {
+        self.bookmark = bookmark
+        bookmarkImage.image = self.bookmark.icon
+        bookmarkNameLbl.text = self.bookmark.name
     }
+
+
     
 }
