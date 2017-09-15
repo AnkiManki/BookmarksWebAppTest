@@ -12,6 +12,7 @@
 		9D6388791F6BD3A000AAFDC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D6388771F6BD3A000AAFDC8 /* Main.storyboard */; };
 		9D63887B1F6BD3A000AAFDC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D63887A1F6BD3A000AAFDC8 /* Assets.xcassets */; };
 		9D63887E1F6BD3A000AAFDC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D63887C1F6BD3A000AAFDC8 /* LaunchScreen.storyboard */; };
+		9D63888A1F6BD4A300AAFDC8 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6388891F6BD4A300AAFDC8 /* Bookmark.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		9D63887A1F6BD3A000AAFDC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D63887D1F6BD3A000AAFDC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D63887F1F6BD3A000AAFDC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D6388891F6BD4A300AAFDC8 /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,47 @@
 		9D6388721F6BD3A000AAFDC8 /* BookmarksWebApp */ = {
 			isa = PBXGroup;
 			children = (
-				9D6388731F6BD3A000AAFDC8 /* AppDelegate.swift */,
-				9D6388751F6BD3A000AAFDC8 /* ViewController.swift */,
-				9D6388771F6BD3A000AAFDC8 /* Main.storyboard */,
-				9D63887A1F6BD3A000AAFDC8 /* Assets.xcassets */,
-				9D63887C1F6BD3A000AAFDC8 /* LaunchScreen.storyboard */,
-				9D63887F1F6BD3A000AAFDC8 /* Info.plist */,
+				9D6388881F6BD3B400AAFDC8 /* Model */,
+				9D6388871F6BD3B200AAFDC8 /* View */,
+				9D6388861F6BD3B100AAFDC8 /* Controller */,
+				9D6388851F6BD3AF00AAFDC8 /* Supporting Files */,
 			);
 			path = BookmarksWebApp;
+			sourceTree = "<group>";
+		};
+		9D6388851F6BD3AF00AAFDC8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9D63887F1F6BD3A000AAFDC8 /* Info.plist */,
+				9D63887C1F6BD3A000AAFDC8 /* LaunchScreen.storyboard */,
+				9D63887A1F6BD3A000AAFDC8 /* Assets.xcassets */,
+				9D6388731F6BD3A000AAFDC8 /* AppDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9D6388861F6BD3B100AAFDC8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9D6388751F6BD3A000AAFDC8 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9D6388871F6BD3B200AAFDC8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9D6388771F6BD3A000AAFDC8 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9D6388881F6BD3B400AAFDC8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9D6388891F6BD4A300AAFDC8 /* Bookmark.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +173,7 @@
 			files = (
 				9D6388761F6BD3A000AAFDC8 /* ViewController.swift in Sources */,
 				9D6388741F6BD3A000AAFDC8 /* AppDelegate.swift in Sources */,
+				9D63888A1F6BD4A300AAFDC8 /* Bookmark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +312,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U52X69UCNJ;
-				INFOPLIST_FILE = BookmarksWebApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BookmarksWebApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stefanmarkovic.BookmarksWebApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -291,7 +327,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U52X69UCNJ;
-				INFOPLIST_FILE = BookmarksWebApp/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BookmarksWebApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.stefanmarkovic.BookmarksWebApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
